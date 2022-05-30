@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <style>
+    * {
+
+      padding: 0;
+      margin: 0;
+    }
+
+    #top_heading {
+      margin: 2px
+    }
+
+    .top_class {
+      float: right;
+      margin-right: 5px;
+      margin-top: -31px;
+
+    }
+
+    #Center_heading {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .Team_Section {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+
+    }
+
+    .Team_Section li {
+
+      padding: 12px;
+      list-style-type: none;
+      text-align: center;
+    }
+
+    .button {
+      border: none;
+      text-align: center;
+      padding: 6px 40px 6px 40px;
+      background: orange;
+      margin-bottom: 4px;
+    }
+
+    .about_Paragraph p {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+
+    .footer_container {
+      padding-top: 25px;
+      margin-top: 25px;
+      background: #000;
+    }
+
+    #Newsletter {
+      margin-top: 8px;
+      padding-right: 80px;
+      padding-left: 80px;
+      padding-bottom: 9px;
+      color: white;
+    }
+
+    .form_registeration {
+      background-color: skyblue;
+      width: 50%;
+      margin-left: 300px;
+      padding: 20px;
+      height: 200px;
+      border: 2px solid silver;
+      text-align: center;
+    }
+
+    .form_registeration input {
+      padding: 10px 100px;
+      margin: 5px 0px;
+      /* padding-right: 100px; */
+      /* padding-left: 100px;
+      padding-bottom: 21px; */
+    }
+
+    .form_registeration button {
+      margin-top: 20px;
+      padding: 10px 80px;
+      background-color: orange;
+      /* padding-left: 50px;
+      padding-right: 50px; */
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    .table_heading {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    table {
+      text-align: center;
+      border: 2px solid black;
+      padding: 25px;
+      margin-left: 500px;
+      margin-top: 25px;
+      margin-right: 25px;
+      margin-bottom: 2px;
+    }
+
+    td,
+    th {
+      padding: 8px;
+      column-gap: normal;
+    }
+
+    nav ul li {
+      float: right;
+      padding: 12px;
+      list-style-type: none;
+    }
+
+    .navbar {
+      position: absolute;
+      bottom: 430px;
+      opacity: 1.0;
+      height: 7vh;
+      width: 100%;
+      font-weight: bolder;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: white;
+    }
+
+    .navbar input {
+      padding: 4px 28px;
+      margin: 12px 87px;
+    }
+
+    ul li a {
+      text-decoration: none;
+
+      font-weight: 200px;
+      color: white;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container" style="position: relative;">
+    <img src="https://fan9.net/wp-content/uploads/2020/07/ipl2020-2.jpg" height="500" width="100%" />
+    <div class="navbar">
+      <nav>
+        <h1 style="float: left;margin-left: 20px;margin-top: 10px;">4Th Empire</h1>
+        <div style="float: left;">
+          <form>
+            <input type="search" placeholder="search" class="search_navbar">
+
+          </form>
+
+        </div>
+        <ul>
+
+
+          <li>
+            <a href="http://localhost:4000/api/v1/users/signup">SignUp</a>
+          </li>
+          <li>
+            <a href="http://localhost:4000/api/v1/users/login">Login</a>
+          </li>
+        </ul>
+
+      </nav>
+
+
+
+    </div>
+  </div>
+
+  <!--Crud operation-->
+  <!-- <h1 id="Center_heading">Enter The Details To register</h1> -->
+  <!-- <div class="form_registeration">
+    <form action="/api/v1/users/create" method="post">
+      <div>
+        <label>Name:</label>
+        <input type="text" placeholder="name" name="name">
+      </div>
+      <div>
+        <label>Email:</label>
+        <input type="email" placeholder="email" name="email">
+      </div>
+
+
+
+      <div>
+        <label>Passw:</label>
+        <input type="password" placeholder="password" name="password">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div> -->
+
+
+  <div class="table_heading">
+    <!-- <h3>List Of Players In Our Record</h3> -->
+  </div>
+
+  <!--Crud table-->
+  <!-- 
+  <table>
+
+
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Edit</th>
+    </tr>
+    <%userList.forEach(usr=>{%>
+      <tr>
+        <td>
+          <%=usr._id%>
+        </td>
+        <td>
+          <%=usr.name%>
+        </td>
+        <td>
+          <%=usr.email%>
+        </td>
+        <td><a style="text-decoration: none;" href="http://localhost:4000/api/v1/users/getupdate/<%=usr._id%>"><i
+              class="fas fa-edit"></i>Edit</a></td>
+        <td><a style="text-decoration: none;" href="/api/v1/users/delete/<%=usr._id%>"><i
+              class="fas fa-edit"></i>Del</a></td>
+
+      </tr>
+      <%})%>
+  </table> -->
+
+  <section>
+    <div style="width: 100%;">
+      <div style="width: 45%;margin-left: 50px;font-size: large;float: left;margin-top: 35px;">
+        <h1>Indian Premier League 2022</h1>
+        <p style="margin-top: 20px;">Check Our Website For the latest Updates</p>
+        <button
+          style="margin-top: 50px; background-color:	#87CEFA ; padding: 14px 20px; border: none;border-radius: 15px;">Learn
+          More</button>
+        <button
+          style="margin-top: 50px; background-color:	pink ; padding: 14px 20px; border: none;border-radius: 15px;">Easy
+          Access</button>
+      </div>
+      <div style="width: 45%;margin-left: 100px;font-size: large;float: left;">
+        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/playerheadshot/ipl/284/164.png">
+      </div>
+      <div></div>
+    </div>
+  </section>
+  <h1 style="text-align: center;margin-bottom: 20px;margin-top: 20px;">Teams</h1>
+  <div class="Team_Section">
+    <div
+      style="width: 20%;text-align:center;float:  left;margin-left: 8px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;border-radius: 25px">
+      <h1 style="text-align: center;">India</h1>
+      <hr>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <button class="button">View Website</button>
+    </div>
+    <div
+      style="width: 20%;margin-left: 8px;float: left;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;text-align:center;border-radius: 25px;">
+      <h1 style="text-align: center;">Pakistan</h1>
+      <hr>
+      <li>Azhar</li>
+      <li>Aslam</li>
+      <li>Shoukat</li>
+      <li>Shafique</li>
+      <li>Rehman</li>
+      <li>Ali</li>
+      <li>Umar</li>
+      <button class="button">View Website</button>
+    </div>
+    <div
+      style="width: 20%;margin-left: 8px;float: left;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;text-align:center;border-radius: 25px">
+      <h1 style="text-align: center;">India</h1>
+      <hr>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <button class="button">View Website</button>
+    </div>
+    <div
+      style="width: 18%;margin-left: 8px;float: left;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;text-align:center;border-radius: 25px">
+      <h1 style="text-align: center;">India</h1>
+      <hr>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <button class="button">View Website</button>
+    </div>
+    <div
+      style="width: 18%;margin-left: 8px;float: left;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;text-align:center;border-radius: 25px;margin-bottom: 20px;">
+      <h1 style="text-align: center;">India</h1>
+      <hr>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <li>Rohit Sharma</li>
+      <button class="button">View Website</button>
+    </div>
+
+  </div>
+  <div>
+    <h1 style="text-align: center;margin-bottom: 20px;margin-top: 20px;">About Us</h1>
+  </div>
+
+  <div class="about_Paragraph">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of Lorem Ipsum.</p>
+  </div>
+  <section>
+    <h1
+      style="text-align:center;font-size:xx-large;font-weight:bolder;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+      Gallery</h1>
+    <hr style="width: 5%;margin-left :750px;">
+    <p style="text-align: center;">Here are some of moments captured of most anticipated cricket festival of the year
+      i-e 2022 IPL</p>
+    <table style="max-width:100%;padding: 50px;">
+      <tr>
+        <th><img
+            src="https://www.sportstiger.com/wp-content/uploads/2022/03/C-_Users_harshVardhan_Desktop_web-image-live-blog.jpg"
+            width="200px"></th>
+        <th><img src="https://etimg.etb2bimg.com/photo/74508790.cms" width="200px"></th>
+        <th><img
+            src="data:image/png;base64,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"
+            width="200px"></th>
+      </tr>
+      <tr>
+        <th><img src="https://www.crictracker.com/wp-content/uploads/2022/03/IPL-2022-Schedule-Announcement.jpeg"
+            width="200px"></th>
+        <td><img
+            src="https://www.insidesport.in/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-23-at-1.48.04-PM.jpeg?w=967"
+            width="200px"></td>
+        <td><img src="https://static.abplive.com/wp-content/uploads/2020/04/15131306/IPL.jpg" width="200px"></td>
+      </tr>
+    </table>
+  </section>
+  <footer>
+    <div style="background-color: #000; width:100%;height:200px;margin-top: 25px;">
+      <div style="width: 33%;margin-left:8px;float: left;padding-top: 25px;margin-right: 20px;">
+        <h1 style="color: aliceblue;margin-top: 5px;margin-left: 5px;">Contact Information</h1>
+        <p style="color: aliceblue;padding-top: 8px;margin-left: 5px;">Number: +92331521016</p>
+        <p style="color: aliceblue;padding-top: 8px;margin-left: 5px;">Email: sk346841@gmail.com</p>
+      </div>
+      <div style="width: 33%;float: left;">
+        <h1 style="color: aliceblue;margin-top: 5px;padding-top: 5px;">Subscribe To Our NewsLetter</h1>
+        <p style="color: aliceblue;padding-top: 12px;">By subscribing to our newsletter you can get our latest news</p>
+        <input type="text" id="Newsletter" placeholder="enter your email">Subscribe</input>
+      </div>
+
+
+    </div>
+  </footer>
+</body>
+
+</html>
